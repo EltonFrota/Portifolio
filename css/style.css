@@ -1,0 +1,288 @@
+/*Fontes externas*/
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #fffafa;
+    position: relative;
+    width: 1440px;
+    height: auto;
+    margin: 0 auto;
+}
+main {
+    background: linear-gradient(#FEFEFE 1%, #b8b1b1);
+}
+/*MENU CABEÇALHO - topo*/
+header {
+    /*Espaçameto */
+    width: 1440px;;
+    height: 45px;
+    margin: 0 auto;
+}
+
+nav {
+    /*Posicionando o link na direita da tela*/
+    position: absolute;
+    width: 642;
+    height: 19;
+    top: 15px;
+    right: 0px;
+}
+
+nav li {
+    /*Configurando as li para que fique uma na frete da outra*/
+    display: inline;
+    margin: 0 20px 0 15px;
+}
+
+nav a {
+    /*Configurando a cor, negrito, tamando da fonte e tirando a linha dos links*/
+    color: #000000;
+    font-weight: bold;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    /*Aplicando um efeito quado passar o mouse em cima do link*/
+    color: #98a330;
+    text-decoration: underline;
+}
+h1 {
+    position: absolute;
+    padding-left: 20px;
+    top: 15px;
+}
+
+
+/*FIM CABEÇALHO*/
+
+/*********************************/
+#hero{        
+    width: 1136px;
+    height: 368px;
+    margin: 0 auto;
+}
+/*topo*/
+.caixa-apresentacao {
+    position: absolute;
+    Width: 751px;
+    Height: 246px;       
+    top: 10em;
+}
+/*Foto*/
+.foto {
+    position: absolute;
+    border-radius: 50%;
+    right: 98px;
+    top:5.8em;
+    height: 368px;
+    width: 368px;
+}
+
+.titulo-apresentacao {
+    font-size: 1.8em;   
+    font-weight: bolder;
+    margin-bottom: 0.5em;    
+}
+
+.titulo {
+    width: 1440;
+    text-align: center;
+    font-size: 2em;
+    margin: 1em;   
+}
+
+.texto {
+    font-size: 1.2em;
+    margin: 2em 0;
+    padding-left: 28px;
+}
+
+/*Link redes sociais*/
+.rede-social li {
+    display: inline;
+    margin: 0 0.8em
+}
+.rede-social {
+    margin-top: 15px;
+}
+.rede-social a {
+    text-transform: uppercase;
+    color: #000000;
+    font-weight: bold;
+    font-size: 0.7em;
+    text-decoration: none;
+}
+
+/*Configura do titulo "Sobre Mim"*/
+
+.titulo-sobremim {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 1em;
+}
+.sobremin{
+    width: 1136px;
+    height: 155px;
+}
+.sobremin p {
+    line-height: 1.3em;
+    padding-left: 33px;
+}
+
+/*INICIO DA CAIXAS*/
+.caixa-skills {
+    position: relative;
+    /*Eu quero que essa caixa levante, para que o menu entre na  caixa*/
+    /*Quando mexemos com position: abssolute ele pega a referencia da pagina, 
+    e qdo queremos que alguma coisa fique dentro de um DIV usamos   o position:relative*/
+    width: 940px;
+    /*Essa é uma largura padrão utilizada na web*/
+    margin: 0 auto;
+}
+
+.caixa {
+    /*Alinhamento das caixas no centro*/
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px;
+    text-align: center;
+}
+
+.caixa li {
+    display: inline-block;
+    width: 150px;
+    height: 100px;
+    vertical-align: top;
+    margin: 0 1.5% 1em;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    /*Com esse comando os meus 30% são definitivos*/
+    border: 2px solid #cabdbd;
+    border-radius: 10px;
+    box-shadow: 10px 20px 10px RGBA(25, 48, 100, 0.35);
+}
+
+.caixa li::before {
+    /*Quando queremos criar um elemento na página, via CSS, antes do elemento do HTML, usamos a propriedade :before.*/
+    content: "🟊 ";
+}
+
+.caixa li:hover {
+    border: 5px solid #98a330;
+}
+
+.caixa li:hover h2 {
+    /*Qdo eu passar o mouser, o titulo aumentará*/
+    font-size: 34px;
+}
+
+.caixa h2 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.caixa-descricao {
+    font-size: 18px;
+}
+
+/*INICIO DO CONTATO: Formatação da pagina de contato*/
+
+.informacao {
+    flex: content;
+    width: 520px;
+    display: inline-block;
+    margin-left: 30%;
+}
+
+form label, form legend {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 0 10px;
+}
+
+.input-padrao {
+    display: block;
+    margin: 0 0 20px;
+    padding: 10px;
+    width: 100%;
+}
+
+.checkbox {
+    margin: 20px 0;
+}
+
+/*Botão enviar*/
+.enviar {
+    width: 105%;
+    padding: 15px 0;
+    background: rgb(116, 112, 153);
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    transition: 1s all;
+    /*Todas as Transições vão durar 1seg.*/
+    cursor: pointer;
+    margin: 0px auto;
+}
+
+.enviar:hover {
+    background: rgb(143, 83, 9);
+    transform: scale(1.1);
+}
+
+/*dentro dessa media query que criamos um estilo visual que compreenda telas de até 480px.*/
+
+@media screen and (max-width:414px) {
+    .caixa, .principal, .conteudo-beneficios, .mapa-conteudo, .video {
+        width: auto;
+    }
+
+    h1, p {
+        text-align: center;
+        margin: 0.5em auto;
+    }
+
+    nav {
+        position: static;
+    }
+
+    p {
+        padding: 1em 15px;
+    }
+
+    .principal {
+        padding: 0.5em;
+    }
+
+    
+
+    /*Parte dos contato*/
+   .informacao {
+       flex:content;      
+   }
+
+    /*botao*/
+    input[type="submit"i] {
+        width: 100%;
+    }
+ 
+    ul li {
+        margin: 2em 0;
+    }
+}
+
+/*RODAPÉ: comum em todas as pagina*/
+footer {
+    text-align: center;
+    background-image: url("../imagens/bg.jpg");
+    padding: 40px 0;
+}
+
+.copyright {
+    color: #FFFFFF;
+    font-size: 13px;
+    margin: 20px 0 0;
+}
